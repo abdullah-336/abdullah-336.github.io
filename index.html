@@ -38,6 +38,7 @@
     "Vue.js",
     "Nuxt.js",
     "React.js",
+    "Next.js",
     "ElasticSearch",
     "System Architecture",
     "Cloud Infrastructure",
@@ -61,13 +62,12 @@
   --panel-hover: #2d3748;
   --text: #f0f6fc;
   --text-muted: #8b949e;
-  --accent-primary: #58a6ff;    /* Bright blue - technical precision */
-  --accent-secondary: #f97316;   /* Orange - energy and innovation */
-  --accent-tertiary: #22c55e;    /* Green - growth and success */
+  --accent-primary: #58a6ff;
+  --accent-secondary: #f97316;
+  --accent-tertiary: #22c55e;
   --border: #30363d;
   --code-bg: rgba(88, 166, 255, 0.1);
 
-  /* Typography */
   --font-display: 'JetBrains Mono', monospace;
   --font-body: 'IBM Plex Sans', sans-serif;
 }
@@ -87,7 +87,6 @@ body {
   font-size: 17px;
 }
 
-/* Atmospheric Background Effect */
 .bg-atmosphere {
   position: fixed;
   top: 0;
@@ -102,7 +101,6 @@ body {
     radial-gradient(circle at 50% 50%, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
 }
 
-/* Animated Grid Pattern */
 .grid-overlay {
   position: fixed;
   top: 0;
@@ -125,7 +123,6 @@ body {
   100% { background-position: 50px 50px; }
 }
 
-/* Custom Cursor Glow */
 #cursor {
   position: fixed;
   width: 400px;
@@ -139,7 +136,6 @@ body {
   transition: width 0.3s, height 0.3s;
 }
 
-/* Container */
 .main-container {
   position: relative;
   z-index: 2;
@@ -148,7 +144,6 @@ body {
   padding: 0 40px;
 }
 
-/* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -206,7 +201,6 @@ body {
   text-justify: inter-word;
 }
 
-/* Impact Metrics */
 .impact-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -259,7 +253,6 @@ body {
   font-weight: 600;
 }
 
-/* Profile Image */
 .profile-container {
   position: relative;
   display: flex;
@@ -301,7 +294,6 @@ body {
   50% { transform: translateY(-20px) rotate(5deg); }
 }
 
-/* Buttons */
 .btn-group {
   display: flex;
   gap: 16px;
@@ -346,7 +338,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Section Styling */
 section {
   padding: 120px 0;
   position: relative;
@@ -385,7 +376,6 @@ section.visible {
   line-height: 1.6;
 }
 
-/* Engineering Philosophy */
 .philosophy-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -444,7 +434,6 @@ section.visible {
   line-height: 1.7;
 }
 
-/* Project Cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -562,7 +551,6 @@ section.visible {
   color: var(--accent-secondary);
 }
 
-/* Experience Timeline */
 .timeline {
   position: relative;
   padding-left: 50px;
@@ -653,7 +641,6 @@ section.visible {
   font-weight: 600;
 }
 
-/* Skills Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -710,7 +697,6 @@ section.visible {
   transform: translateY(-2px);
 }
 
-/* Contact Section */
 .contact-section {
   text-align: center;
   padding: 120px 0;
@@ -756,7 +742,6 @@ section.visible {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
   border-top: 1px solid var(--border);
   padding: 50px 0;
@@ -769,7 +754,6 @@ footer p {
   margin-bottom: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -834,7 +818,6 @@ footer p {
   }
 }
 
-/* Scroll animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -857,7 +840,6 @@ footer p {
 <div class="grid-overlay"></div>
 <div id="cursor"></div>
 
-<!-- HERO SECTION -->
 <section class="hero visible">
   <div class="main-container">
     <div class="hero-grid">
@@ -868,7 +850,7 @@ footer p {
         </h1>
 
         <p class="hero-subtitle">
-          Ruby on Rails · Vue/React · AI/NLP · ElasticSearch · 5+ Years Production Systems
+          Architecting High-Performance Web & AI-Driven Platforms
         </p>
 
         <p class="hero-description">
@@ -881,7 +863,6 @@ footer p {
           <a href="https://github.com/abdullah-336" class="btn-elite btn-secondary-elite" target="_blank">GitHub</a>
         </div>
 
-        <!-- IMPACT METRICS -->
         <div class="impact-metrics">
           <div class="metric-item">
             <span class="metric-value">5+</span>
@@ -909,7 +890,6 @@ footer p {
   </div>
 </section>
 
-<!-- ENGINEERING PHILOSOPHY -->
 <section id="philosophy">
   <div class="main-container">
     <div class="section-header">
@@ -979,7 +959,6 @@ footer p {
   </div>
 </section>
 
-<!-- PRODUCTION SYSTEMS -->
 <section id="systems">
   <div class="main-container">
     <div class="section-header">
@@ -997,22 +976,44 @@ footer p {
         <div class="project-body">
           <h3 class="project-title">European Booking Platform</h3>
           <p class="project-description">
-            <strong>Architected revenue-critical booking system</strong> serving European holiday accommodations market.
-            Led ElasticSearch v6 → v8 migration delivering 100K+ listing search with improved accuracy. Implemented
-            Nuxt.js SSR reducing page load time 40% and increasing organic traffic 35%. Designed Sidekiq pipelines
-            processing 120K+ daily sync jobs for real-time availability.
+            <strong>Architected revenue-critical booking system</strong> serving European holiday accommodations. Led ElasticSearch v6→v8 migration (100K+ listings), implemented Nuxt.js SSR (40% faster loads, 35% traffic growth), designed Sidekiq pipelines (120K+ daily sync jobs), built OpenGDS and PrimalRes integrations for real-time availability and pricing synchronization, integrated Trengo WhatsApp API for instant booking confirmations and owner notifications, created SEO-optimized landing pages with SSR, and managed Rails 5→6→7 and Vue 2→Nuxt 2→Nuxt 3 migrations ensuring zero-downtime transitions.
           </p>
           <div class="project-tech">
             <span class="tech-badge">Rails 7</span>
+            <span class="tech-badge">Nuxt.js 3</span>
             <span class="tech-badge">Vue.js</span>
-            <span class="tech-badge">Nuxt.js</span>
-            <span class="tech-badge">ElasticSearch</span>
+            <span class="tech-badge">ElasticSearch 8</span>
             <span class="tech-badge">Sidekiq</span>
-            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">OpenGDS</span>
+            <span class="tech-badge">PrimalRes</span>
+            <span class="tech-badge">Trengo</span>
+            <span class="tech-badge">WhatsApp API</span>
           </div>
           <a href="https://nice2stay.com" class="project-link" target="_blank">
             View Live Platform →
           </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">ON2DOOR</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Fleet Management Platform (Onfleet Replica)</h3>
+          <p class="project-description">
+            <strong>Led end-to-end development</strong> of production-grade delivery and fleet management platform. Architected Next.js 15 admin dashboard with Materio MUI template, Rails 7 API with PostgreSQL (Neon), real-time updates via ActionCable, role-based access control, task assignment workflows, driver scheduling with FullCalendar, location tracking with Google Maps/Mapbox, and integrated TanStack React Query + Redux Toolkit for state management. Deployed frontend on Cloudflare Pages and backend on Render/Koyeb with cost-optimized infrastructure achieving enterprise-grade performance on startup budget.
+          </p>
+          <div class="project-tech">
+            <span class="tech-badge">Next.js 15</span>
+            <span class="tech-badge">Rails 7 API</span>
+            <span class="tech-badge">Material UI v6</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">ActionCable</span>
+            <span class="tech-badge">Redux Toolkit</span>
+            <span class="tech-badge">Google Maps</span>
+            <span class="tech-badge">Cloudflare Pages</span>
+          </div>
         </div>
       </div>
 
@@ -1042,27 +1043,6 @@ footer p {
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">BI INVENTORY</div>
-        </div>
-        <div class="project-body">
-          <h3 class="project-title">BI Management System</h3>
-          <p class="project-description">
-            <strong>Collaborated with Canadian team</strong> building BI inventory management application.
-            Delivered intuitive Vue.js + PrimeVue interface with efficient CRUD operations via Rails APIs.
-            Optimized API usage achieving 15% efficiency increase and reduced load times—100% client satisfaction.
-          </p>
-          <div class="project-tech">
-            <span class="tech-badge">Rails</span>
-            <span class="tech-badge">Vue.js</span>
-            <span class="tech-badge">PrimeVue</span>
-            <span class="tech-badge">Cloudflare</span>
-            <span class="tech-badge">Netlify</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
           <div class="project-icon">AI AUTOMATION</div>
         </div>
         <div class="project-body">
@@ -1087,7 +1067,6 @@ footer p {
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="main-container">
     <div class="section-header">
@@ -1176,7 +1155,6 @@ footer p {
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="main-container">
     <div class="section-header">
@@ -1213,7 +1191,6 @@ footer p {
           <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">TypeScript</span>
           <span class="skill-tag">jQuery</span>
-          <span class="skill-tag">CoffeeScript</span>
         </div>
       </div>
 
@@ -1226,6 +1203,7 @@ footer p {
           <span class="skill-tag">CSS3</span>
           <span class="skill-tag">Bootstrap</span>
           <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Material UI</span>
           <span class="skill-tag">Responsive Design</span>
         </div>
       </div>
@@ -1239,7 +1217,6 @@ footer p {
           <span class="skill-tag">Sidekiq</span>
           <span class="skill-tag">Background Jobs</span>
           <span class="skill-tag">Searchkick</span>
-          <span class="skill-tag">Ransack</span>
         </div>
       </div>
 
@@ -1254,7 +1231,6 @@ footer p {
           <span class="skill-tag">LLM Integration</span>
           <span class="skill-tag">Chatbot Development</span>
           <span class="skill-tag">WhatsApp Business API</span>
-          <span class="skill-tag">Template Automation</span>
         </div>
       </div>
 
@@ -1266,11 +1242,10 @@ footer p {
           <span class="skill-tag">AWS</span>
           <span class="skill-tag">Docker</span>
           <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">Heroku</span>
-          <span class="skill-tag">DigitalOcean</span>
+          <span class="skill-tag">Cloudflare Pages</span>
+          <span class="skill-tag">Render</span>
           <span class="skill-tag">Netlify</span>
           <span class="skill-tag">Vercel</span>
-          <span class="skill-tag">Cloudflare</span>
         </div>
       </div>
 
@@ -1292,7 +1267,6 @@ footer p {
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="main-container">
     <h2 class="contact-title">Let's Build Something Great</h2>
@@ -1314,24 +1288,18 @@ footer p {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="main-container">
-    <p>© 2026 Abdullah Zafar — Built with precision, deployed with confidence</p>
+    <p>© 2026 Abdullah Zafar — Built with Precision, Deployed with Confidence</p>
     <p style="margin-top: 12px; font-size: 0.85rem;">
-      Senior Software Engineer · AI & Scalable Systems · Ruby on Rails · JavaScript · Cloud Infrastructure
+      Senior Software Engineer · AI & Scalable Systems
     </p>
   </div>
 </footer>
 
-<!-- JAVASCRIPT -->
 <script>
-// Custom Cursor Movement
 const cursor = document.getElementById('cursor');
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
+let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
 
 window.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
@@ -1341,19 +1309,15 @@ window.addEventListener('mousemove', (e) => {
 function animateCursor() {
   const dx = mouseX - cursorX;
   const dy = mouseY - cursorY;
-
   cursorX += dx * 0.1;
   cursorY += dy * 0.1;
-
   cursor.style.left = cursorX + 'px';
   cursor.style.top = cursorY + 'px';
-
   requestAnimationFrame(animateCursor);
 }
 
 animateCursor();
 
-// Intersection Observer for Scroll Animations
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -100px 0px'
@@ -1373,7 +1337,6 @@ document.querySelectorAll('section').forEach(section => {
   }
 });
 
-// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -1387,7 +1350,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Counter Animation for Metrics
 function animateCounter(element) {
   const text = element.textContent;
   const isPercentage = text.includes('%');
@@ -1395,8 +1357,6 @@ function animateCounter(element) {
   const hasPlus = text.includes('+');
   
   let target = parseFloat(text.replace(/[^0-9.]/g, ''));
-  if (isK) target = target;
-  
   const duration = 2000;
   const increment = target / (duration / 16);
   let current = 0;
@@ -1404,14 +1364,14 @@ function animateCounter(element) {
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
-      let finalText = target.toFixed(target % 1 === 0 ? 0 : 0);
+      let finalText = target.toFixed(0);
       if (isK) finalText += 'K';
       if (hasPlus) finalText += '+';
       if (isPercentage) finalText += '%';
       element.textContent = finalText;
       clearInterval(timer);
     } else {
-      let displayText = current.toFixed(target % 1 === 0 ? 0 : 0);
+      let displayText = current.toFixed(0);
       if (isK) displayText += 'K';
       if (hasPlus) displayText += '+';
       if (isPercentage) displayText += '%';
@@ -1424,10 +1384,6 @@ const metricsObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
       entry.target.classList.add('counted');
-      const originalText = entry.target.getAttribute('data-original');
-      if (!originalText) {
-        entry.target.setAttribute('data-original', entry.target.textContent);
-      }
       animateCounter(entry.target);
     }
   });
@@ -1437,7 +1393,6 @@ document.querySelectorAll('.metric-value').forEach(metric => {
   metricsObserver.observe(metric);
 });
 
-// Add parallax effect to profile image
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
   const profileImg = document.querySelector('.profile-image');
